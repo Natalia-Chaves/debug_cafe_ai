@@ -1,0 +1,15 @@
+{
+  "name": "@assistente/ia-web",
+  "version": "1.0.0",
+  "description": "Assistente de IA Web com integração Gemini",
+  "main": "backend/server.js",
+  "scripts": {
+    "install-deps": "cd backend && npm install",
+    "start": "cd backend && npm start",
+    "dev": "cd backend && npm run dev",
+    "setup": "npm run install-deps"
+  },
+  "keywords": ["ai", "chatbot", "gemini", "web"],
+  "author": "",
+  "license": "ISC"
+}

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Debug Café — Assistente de IA</title>
+    <meta name="description" content="Respostas certas em instantes. Converse com a gente!" />
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/marked@9.1.6/marked.min.js"></script>
+  </head>
+  <body>
+    <div class="app">
+      <header class="header">
+        <div class="header-content">
+          <div class="logo">
+            <img src="/assets/icons/logo.png" alt="Debug Café" class="logo-icon" />
+            <h1 class="logo-text">Debug Café</h1>
+          </div>
+
+
+        </div>
+      </header>
+
+      <main class="main">
+        <div class="chat-container">
+          <div class="welcome-message" id="welcomeMessage">
+            <h2>Bem-vindo ao Debug Café IA</h2>
+            <p>Respostas certas em instantes. Conectado ao Google Gemini para conversas inteligentes.</p>
+          </div>
+          
+          <div class="messages" id="messagesContainer" aria-live="polite">
+            <!-- Messages will be inserted here -->
+          </div>
+        </div>
+
+        <form class="input-form" id="chatForm" autocomplete="off">
+          <div class="input-container">
+            <textarea 
+              id="messageInput" 
+              placeholder="Digite sua pergunta aqui..."
+              rows="1"
+              maxlength="2000"
+              aria-label="Digite sua mensagem"
+              required
+            ></textarea>
+            <div class="input-actions">
+              <button type="button" id="clearBtn" class="btn btn-secondary" title="Limpar conversa">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 6h18M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2"/>
+                </svg>
+              </button>
+              <button type="submit" id="sendBtn" class="btn btn-primary" title="Enviar mensagem">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22,2 15,22 11,13 2,9 22,2"></polygon>
+                </svg>
+                <span>Enviar</span>
+              </button>
+            </div>
+          </div>
+          <div class="input-footer">
+            <span class="char-count" id="charCount">0/2000</span>
+            <span class="shortcut-hint">Ctrl + Enter para enviar</span>
+          </div>
+        </form>
+      </main>
+
+      <div class="toast-container" id="toastContainer"></div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-content">
+        <p>&copy; 2025 Debug Café - Assistente de IA</p>
+      </div>
+    </footer>
+
+    <noscript>
+      <div class="noscript">
+        <h2>JavaScript necessário</h2>
+        <p>Ative o JavaScript no seu navegador para usar o Debug Café IA.</p>
+      </div>
+    </noscript>
+    
+    <script src="/script.js"></script>
+  </body>
+</html>
